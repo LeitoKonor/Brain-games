@@ -13,6 +13,9 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 
+package-uninstall:
+	python3 -m pip uninstall --yes dist/*.whl
+
 lint:
 	poetry run flake8 brain_games
 
@@ -22,4 +25,7 @@ brain-even:
 brain-calc:
 	poetry run brain-calc
 
-.PHONY: install brain-games build publish package-install lint brain-even brain-calc
+brain-gcd:
+	poetry run brain-gcd
+
+.PHONY: install brain-games build publish package-install lint brain-even brain-calc package-uninstall brain-gcd
