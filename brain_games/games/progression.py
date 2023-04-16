@@ -12,7 +12,7 @@ def make_progression(progression_len,
     first_num = randint(min_first_num, max_first_num)
     progression_step = randint(min_step, max_step)
     progression = [first_num, ]
-    for index in range(progression_len):
+    for i in range(progression_len):
         next_num = first_num + progression_step
         progression.append(next_num)
         first_num = next_num
