@@ -19,7 +19,7 @@ def make_progression(progression_len, min_step,
     return progression
 
 
-def make_question_and_correct_answer():
+def get_game():
     """Make game question and answer."""
     progression = make_progression(progression_len=10,
                                    min_step=1, max_step=5,

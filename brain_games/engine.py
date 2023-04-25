@@ -13,7 +13,7 @@ def run_game(game_name):
     print(game_name.DESCRIPTION)
     round_number = 1
     while round_number <= MAX_ROUNDS:
-        question, correct_answer = game_name.make_question_and_correct_answer()
+        question, correct_answer = game_name.get_game()
         print(f"Question: {question}")
         user_answer = prompt.string("Your answer: ")
         if not (user_answer == correct_answer):

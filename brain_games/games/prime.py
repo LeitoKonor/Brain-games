@@ -11,14 +11,16 @@ def is_prime(number):
         return "no"
     for i in range(2, (number // 2 + 1)):
         if number % i == 0:
-            return "no"
-    return "yes"
+            return False
+    return True
 
 
-def make_question_and_correct_answer():
+def get_game():
     """Make game question and answer."""
-    min_number = 1
-    max_number = 21
-    number = randint(min_number, max_number)
-    question = str(number)
-    return question, is_prime(number)
+    number = randint(1, 21)
+    question = is_prime(number)
+    if question is True:
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
+    return number, correct_answer
